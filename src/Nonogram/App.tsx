@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Home";
+import Home from "./src/Home";
 import Game from "./Game";
 
 function App() {
