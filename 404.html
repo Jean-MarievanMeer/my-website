@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Omleiding naar App</title>
+  <script type="text/javascript">
+    // 1. Haal de repository-naam op (dit moet overeenkomen met je basename)
+    var repoName = '/my-website'; 
+    
+    // 2. Krijg het volledige pad (bijv. /my-website/about/contact)
+    var path = window.location.pathname;
+    
+    // 3. Vervang de repository-naam door de hash (#)
+    // De nieuwe URL wordt: /my-website/#/about/contact
+    var newPath = repoName + '/#' + path.replace(repoName, '');
+    
+    // 4. Vervang de huidige geschiedenisstatus (zodat de browser geen "vorige" pagina ziet)
+    window.history.replaceState(null, null, newPath);
+
+    // 5. Laad de pagina opnieuw met de HASH-URL. 
+    // Omdat de URL nu eindigt op /index.html#/about/contact 
+    // zal GitHub Pages de index.html serveren, en zal React Router het pad na de '#' oppakken.
+    window.location.replace(newPath);
+  </script>
+</head>
+<body>
+  </body>
+</html>
