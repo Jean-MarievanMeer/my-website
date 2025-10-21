@@ -1,5 +1,4 @@
 import {
-  BrowserRouter,
   isRouteErrorResponse,
   Links,
   Meta,
@@ -45,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <BrowserRouter basename="my-website">
+    <>
       <div onContextMenu={event=>event.preventDefault()} className="main-container">
         <NewNavigationRail />
         <header className="header">
@@ -56,7 +55,7 @@ export default function App() {
           {/* Footer content */}
         </footer>
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 
