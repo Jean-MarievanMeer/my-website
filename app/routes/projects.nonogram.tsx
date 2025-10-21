@@ -1,8 +1,10 @@
-
-import Game from '../../src/Nonogram/Game';
+import Board from '~/MyProjects/Nonogram/Board/Board';
 
 export default function () {
     return (
-        <h1>This is my nonogram project</h1>
+        <div>
+            <Board />
+        </div>
+
     );
 }
