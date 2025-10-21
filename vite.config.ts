@@ -5,17 +5,19 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 const repoName = "my-website";
 
-export default defineConfig({
+// Use the function signature to access 'command'
+export default defineConfig(({ command }) => {
+  return {
+    // ⭐️ FIX: Check if the command is 'build' (production)
+    base: command === 'build' 
+      ? `/${repoName}/` 
+      : '/',
 
-  base: process.env.NODE_ENV === 'production' 
-    ? `/${repoName}/` 
-    : '/',
+    plugins: [
+      tailwindcss(), 
+      reactRouter(), 
+      tsconfigPaths()
+    ],
 
-  plugins: [tailwindcss(), reactRouter(), 
-  tsconfigPaths()],
-
-  build: {
-    // Ensures the final files are in the 'dist' folder
-    outDir: 'dist', 
-  },
+  };
 });

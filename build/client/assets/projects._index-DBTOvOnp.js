@@ -1,1 +1,0 @@
-import{w as t,q as s,p as n}from"./chunk-NISHYRIK-CQ3RJ5t9.js";const r=t(function(){const o=s();return n.jsxs("div",{children:[n.jsx("p",{children:"MyProjects"}),n.jsx("button",{onClick:()=>o("nonogram"),children:" Nonogram "})]})});export{r as default};
