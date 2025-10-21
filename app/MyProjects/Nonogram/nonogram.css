@@ -1,0 +1,105 @@
+:root {
+    --tile-size: 40px;
+}
+
+.main-board {
+    background-color: rgb(137, 137, 137);
+    padding: 10px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.tile-grid>* {
+    display: flex;
+    flex-direction: row;
+    /* margin:5px;
+    margin-top: 5px */
+}
+
+/*settings for default tile*/
+.tile-default,
+.tile-confirmed,
+.tile-disabled,
+.tile-hint,
+.tile-hint-correct,
+.tile-undo,
+.new-game-button {
+    margin: 2px;
+    height: var(--tile-size);
+    width: var(--tile-size);
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    border-color: rgb(137, 137, 137);
+    border-radius: 7px;
+    color: black;
+}
+
+.tile-default>svg {
+    opacity: 0;
+}
+
+.tile-confirmed {
+    background-color: rgb(23, 23, 23);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.tile-confirmed>svg {
+    opacity: 0.85 !important;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4)) !important;
+}
+
+.tile-disabled {
+    background-color: rgb(186, 247, 255);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+    color: rgb(80, 124, 255);
+}
+
+.tile-disabled>svg {
+    opacity: 0.85 !important;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4)) !important;
+}
+
+.tile-hint {
+    color: black;
+    cursor: default;
+    /* margin: 0.2px; */
+    background-color: rgb(226, 216, 22)
+}
+
+.tile-hint-correct {
+    background-color: rgb(0, 204, 10);
+
+}
+
+.tile-undo {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.hints-vertical {
+    display: flex;
+    align-items: flex-end;
+}
+
+.hints-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hint-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-game-button {
+    width: auto;
+}
+
+.new-game-button:active {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+
+}
