@@ -7,6 +7,7 @@ const repoName = "my-website";
 
 // Use the function signature to access 'command'
 export default defineConfig(({ command }) => {
+  console.log("myCommand:" + command)
   return {
     // ⭐️ FIX: Check if the command is 'build' (production)
     base: command === 'build' 

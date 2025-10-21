@@ -6,6 +6,8 @@ import App from '../../ReactPractise/Nonogram/src/App';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MyWebsite />
+    <BrowserRouter basename="/my-website">
+      <MyWebsite />
+    </BrowserRouter>
   </StrictMode>
 );
