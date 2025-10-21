@@ -27,10 +27,7 @@ export default function () {
 
 
     return (
-        <>
-            <button onClick={() => {
-                setCounter(prev => prev + 1);
-                setSearchParams({ counter: counter.toString() });
-            }}>{counter}</button>
-        </>);
+        <div>
+           {Date.now()}
+        </div>);
 }
