@@ -45,7 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
-      <div className="main-container">
+      <div onContextMenu={event=>event.preventDefault()} className="main-container">
         <NewNavigationRail />
         <header className="header">
           {/* Header content */}
