@@ -156,7 +156,7 @@ const Board = () => {
     function undo() {
         if (!(!history || history.length <= 1)) {
             history && setTiles(history[history.length - 2]);
-            updateHistory(history[history.length - 2]);
+            setHistory(history!.slice(0, -1));
         }
     }
 
@@ -231,13 +231,13 @@ const Board = () => {
     function handleMouseUp() {
         xToChange.current = null;
         yToChange.current = null;
-        mouse.isClicked() && updateHistory(tiles);
+        mouse.isClicked() && updateHistory();
 
         mouse.handleMouseUp();
 
     }
 
-    function updateHistory(tiles: State[][]) {
+    function updateHistory() {
         const newTiles = [...tiles];
         const newHistory = [...(history || []), newTiles];
         setHistory(newHistory);
