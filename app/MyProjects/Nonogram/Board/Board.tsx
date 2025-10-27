@@ -160,22 +160,6 @@ const Board = () => {
         }
     }
 
-    // function initiateTiles() {
-    //     const tilesParam = searchParams.get("tiles");
-    //     console.log(tilesParam);
-    //     let toReturn;
-
-    //     if (tilesParam) {
-    //         toReturn = convertStringToBoard(tilesParam);
-    //     }
-
-    //     if (toReturn) {
-    //         setTiles(toReturn);
-    //     } else { setTiles(createEmptyBoardBySolution(dummySolution)); }
-
-
-    // }
-
     function createEmptyBoardBySolution(solution: State[][]) {
         return createEmptyBoard(solution[0].length, solution.length);
     }
