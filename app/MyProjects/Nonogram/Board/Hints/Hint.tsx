@@ -62,7 +62,7 @@ export const extractLine = (alignment: Alignment, index: number, states: any[][]
 export function getHints(alignment: Alignment, solution: State[][]): number[][] {
     const toReturn = [];
 
-    for (let i = 0; i < (alignment === "vertical" ? solution.length : solution[0].length); i++) {
+    for (let i = 0; i < (alignment === "horizontal" ? solution.length : solution[0].length); i++) {
         toReturn.push(calcLine(extractLine(alignment, i, solution)));
     }
 

@@ -1,7 +1,7 @@
 import "../app.css";
 import SideBar from './Components/SideBar';
 import NavButton, { type SubItem } from './Components/NavButton';
-import { faChessBoard, faDiagramProject, faEnvelope, faHouse, faPerson } from '@fortawesome/free-solid-svg-icons';
+import { faChessBoard, faDiagramProject, faEnvelope, faGrip, faHouse, faPerson, faTableCellsLarge } from '@fortawesome/free-solid-svg-icons';
 import {useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router';
@@ -49,7 +49,8 @@ const NavigationRail = () => {
             <NavButton text="Over mij" icon={faPerson} link="/aboutme" handleSecond = {handleSecondContent} />
             <NavButton text="Projecten" icon={faDiagramProject} link="/projects" handleSecond = {handleSecondContent}
                 subItems = {[
-                    {icon: faChessBoard, link:"/projects/nonogram", text:"Nonogram"}
+                    {icon: faGrip, link:"/projects/nonogram", text:"Nonogram"},
+                    // {icon: faTableCellsLarge, link:"/projects/connect4", text:"Vier-op-een-rij"}
                 ]}
                     />
         </div>
